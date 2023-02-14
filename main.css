@@ -1,0 +1,92 @@
+.menu-container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+header{
+    width: 100%;
+    height: 1500px;
+    border: 1px solid;
+}
+
+nav{
+    column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    border: 1px solid;
+}
+.hero{
+    margin-top:50px;
+}
+
+input{
+    height: 50px;
+}
+.btn1{
+    width: 50px;
+    height: 50px;
+}
+
+.korzinka{
+    margin-left: 200px;
+    border-radius: 10px;
+}
+
+.korzinka:hover{
+    width: 58px;
+}
+
+select{
+    cursor: pointer;
+    height: 50px;
+}
+
+.hero{
+    width: 100%;
+    height: 90%;
+}
+
+
+.box{
+    box-shadow: rgb(0, 0, 0, 0.25) 2.4px 2.4px 3.2px;
+    /* border: 1px solid; */
+    /* border-radius: 35px; */
+    row-gap: 50px;
+    column-gap: 250px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    border-radius: 45px;
+}
+
+.buy{
+    box-shadow: rgb(0, 0, 0, 0.25) 2.4px 2.4px 3.2px;
+    border-radius: 25px;
+}
+
+.cancellation{
+    border-radius: 25px;
+    box-shadow: rgb(0, 0, 0, 0.25) 2.4px 2.4px 3.2px;
+}
+
+.card{
+    width: 350px;
+    height: 500px;
+    /* border: 1px solid; */
+}
+
+img{
+    border-radius: 25px;
+}
+
+
+.menu-korzinka{
+    width: 1400px;
+    height: 800px;
+    border: 1px solid;
+}
