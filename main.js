@@ -11,7 +11,7 @@ const menu = [
     title: 'cola',
     category: 'drinks',
     price: '4.00',
-    img:'./images/colaimg.jpg',
+    img:'./images/colaimg.jpg', 
   },
   {
     id: 3,
@@ -54,7 +54,6 @@ function writeBoxes(elements_copy){
       <h4>${item.title}</h4>
       <h4 class="price">$${item.price}</h4>
       <button onclick="add(${item.id})" class="buy">buy</button>
-      <button onclik= "addPop(${item.id})" class="cancellation">cancellation</button>
     </div>
   </div>`
   })
@@ -70,7 +69,6 @@ window.addEventListener('DOMContentLoaded',function(){
       <h4>${item.title}</h4>
       <h4 class="price">$${item.price}</h4>
       <button onclick="add(${item.id})" class="buy">buy</button>
-      <button onclik= "addPop(${item.id})" class="cancellation">cancellation</button>
     </div>
   </div>`
   })
@@ -86,6 +84,11 @@ function add(id){
   filter(menu,saved)
 }
 
+function remove(id){
+  saved.pop(id)
+  filter(menu,saved)
+}
+
 function filter(menu,saved){
   let saved_copy = modaldisplay;
   saved_copy.innerHTML = '';
@@ -94,10 +97,11 @@ function filter(menu,saved){
       if (menu[i].id === saved[k]) {
         console.log(menu[i]);
           saved_copy.innerHTML += `
-          <img>${menu[i].img}</img>
+          <img width = "200px"  src="${menu[i].img}"></img> 
           <h1>${menu[i].title}</h1>
           <p>$${menu[i].price}</p>
-          
+          <button onclick="remove(${menu[i].id})" class="remove" >remove
+          </button>
           `
       }
     }
@@ -125,7 +129,6 @@ search.addEventListener('click',function(){
       <h4>${item.title}</h4>
       <h4 class="price">$${item.price}</h4>
       <button onclick="add(${item.id})" class="buy">buy</button>
-      <button class="cancellation">cancellation</button>
     </div>
   </div>`
     }
@@ -145,7 +148,6 @@ select.addEventListener('click',function(){
       <h4>${item.title}</h4>
       <h4 class="price">$${item.price}</h4>
       <button onclick="add(${item.id})" class="buy">buy</button>
-      <button class="cancellation">cancellation</button>
     </div>
   </div>`
     }
@@ -168,7 +170,6 @@ foods.addEventListener('click',function(){
       <h4>${item.title}</h4>
       <h4 class="price">$${item.price}</h4>
       <button onclick="add(${item.id})" class="buy">buy</button>
-      <button class="cancellation">cancellation</button>
     </div>
   </div>`
     }
@@ -188,7 +189,6 @@ sweets.addEventListener('click',function(){
       <h4>${item.title}</h4>
       <h4 class="price">$${item.price}</h4>
       <button onclick="add(${item.id})" class="buy">buy</button>
-      <button class="cancellation">cancellation</button>
     </div>
   </div>`
     }
@@ -208,7 +208,6 @@ drinks.addEventListener('click',function(){
       <h4>${item.title}</h4>
       <h4 class="price">$${item.price}</h4>
       <button onclick="add(${item.id})" class="buy">buy</button>
-      <button class="cancellation">cancellation</button>
     </div>
   </div>`
     }
@@ -246,7 +245,17 @@ cheapSort.addEventListener('click', function () {
   console.log(elements_copy);
   // (elements_copy);
   writeBoxes(elements_copy)
+})
 
+exspensiveSort.addEventListener('click', function () {
+  let elements_copy = [...menu];
+  const result = elements_copy.sort(function (a, b) {
+      return b.price - a.price;
+  })
+  result;
+  console.log(elements_copy);
+  // (elements_copy);
+  writeBoxes(elements_copy)
 })
 
 
