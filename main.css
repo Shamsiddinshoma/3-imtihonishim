@@ -6,29 +6,35 @@
 
 header{
     width: 100%;
-    height: 1500px;
-    border: 1px solid;
+    height: 1780px;
+    /* border: 1px solid; */
 }
 
 nav{
+    background: rgb(98, 210, 232);
     column-gap: 10px;
     justify-content: center;
     align-items: center;
     display: flex;
     width: 100%;
     height: 10%;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 .hero{
-    margin-top:50px;
+    background: rgb(98, 210, 232);
+    /* margin-top:50px; */
 }
 
 input{
+    border-radius: 15px;
     height: 50px;
+    box-shadow: rgb(0, 0, 0, 0.25) 2.4px 2.4px 3.2px;
 }
 .btn1{
+    border-radius: 15px;
     width: 50px;
     height: 50px;
+    box-shadow: rgb(0, 0, 0, 0.25) 2.4px 2.4px 3.2px;
 }
 
 .korzinka{
@@ -41,7 +47,42 @@ input{
 }
 
 select{
+    border-radius: 15px;
+    box-shadow: rgb(0, 0, 0, 0.25) 2.4px 2.4px 3.2px;
     cursor: pointer;
+    height: 50px;
+}
+
+.drinks{
+    border-radius: 15px;
+    box-shadow: rgb(0, 0, 0, 0.25) 2.4px 2.4px 3.2px;
+    height: 50px;
+}
+.foods{
+    border-radius: 15px;
+    margin-left: 100px;
+    box-shadow: rgb(0, 0, 0, 0.25) 2.4px 2.4px 3.2px;
+    height: 50px;
+}
+.sweets{
+    border-radius: 15px;
+    margin-left: 15
+    px;
+    box-shadow: rgb(0, 0, 0, 0.25) 2.4px 2.4px 3.2px;
+    height: 50px;
+}
+.cheap{
+    border-radius: 15px;
+    margin-left: 15
+    px;
+    box-shadow: rgb(0, 0, 0, 0.25) 2.4px 2.4px 3.2px;
+    height: 50px;
+}
+.exspensive{
+    border-radius: 15px;
+    margin-left: 15
+    px;
+    box-shadow: rgb(0, 0, 0, 0.25) 2.4px 2.4px 3.2px;
     height: 50px;
 }
 
@@ -90,3 +131,30 @@ img{
     height: 800px;
     border: 1px solid;
 }
+.extra{
+    
+    /* display: block; 
+    */
+    visibility: visible !important;
+}
+
+
+.modalkorzinka{
+    text-align: center;
+    /* margin-right: -200px; */
+    position: fixed;
+    top: 20%;
+    width: 1000px;
+    height: 90vh;
+    background: rgb(31, 145, 109);
+    visibility: hidden;
+    /* border: 1px solid; */
+    border-radius: 15px;
+    z-index: 1;
+    box-shadow: rgb(5, 5, 4, 1) 2.4px 2.4px 3.2px;
+    color: white;
+}
+
+/* .modalkorzinka.extra{
+
+} */
